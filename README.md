@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/KarimElGarhy/newsletter-sign-up.git)
-- Live Site URL: [Add live site URL here](https://karimelgarhy.github.io/newsletter-sign-up.git)
+- Solution URL: [Solution URL](https://github.com/KarimElGarhy/newsletter-sign-up.git)
+- Live Site URL: [Live site URL](https://karimelgarhy.github.io/newsletter-sign-up.git)
 
 ## My process
 
@@ -43,5 +43,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://mk-studioeg.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/KarimElGarhy)
+- Website - [MyWebSite](https://mk-studioeg.com)
+- Frontend Mentor - [@KarimElGarhy](https://www.frontendmentor.io/profile/KarimElGarhy)
