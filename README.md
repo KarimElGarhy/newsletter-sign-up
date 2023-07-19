@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/KarimElGarhy/newsletter-sign-up.git)
-- Live Site URL: [Live site URL](https://karimelgarhy.github.io/newsletter-sign-up.git)
+- Live Site URL: [Live site URL](https://karimelgarhy.github.io/newsletter-sign-up)
 
 ## My process
 
