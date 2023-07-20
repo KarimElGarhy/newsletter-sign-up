@@ -1,85 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
 
-  <title>
-    Frontend Mentor | Newsletter sign-up form with success message
-  </title>
-  <link rel="stylesheet" href="css/output.css" />
-</head>
+  <body
+    class="font-roboto bg-charcoal-grey h-screen place-items-center flex justify-center text-charcoal-grey"
+  >
+    <section
+      id="mainForm"
+      class="flex bg-white desktop:p-10 rounded-3xl justify-between desktop:flex-row flex-col-reverse"
+    >
+      <section
+        class="p-8 desktop:p-12 flex flex-col justify-around font-normal text-charcoal-grey desktop:w-[55%]"
+      >
+        <h1
+          class="text-dark-gray text-4xl mb-5 desktop:text-5xl font-roboto font-bold"
+        >
+          Stay Updated!
+        </h1>
+        <p class="text-lg">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="flex flex-col mt-5 mb-10 space-y-3 desktop:space-y-5">
+          <li class="font-bold text-md flex items-start">
+            <img class="inline-block me-4" src="assets/images/icon-list.svg" />
+            Product discovery and building what matters
+          </li>
+          <li class="font-bold text-md flex items-start">
+            <img class="inline-block me-4" src="assets/images/icon-list.svg" />
+            Measuring to ensure updates are a success
+          </li>
+          <li class="font-bold text-md flex items-start">
+            <img class="inline-block me-4" src="assets/images/icon-list.svg" />
+            And much more!
+          </li>
+        </ul>
 
-<body class="font-roboto bg-charcoal-grey h-screen place-items-center flex justify-center text-charcoal-grey">
-
-  <section  id="mainForm" class="flex bg-white desktop:p-10 rounded-3xl justify-between desktop:flex-row flex-col-reverse">
-
-    <section class="p-8 desktop:p-12 flex flex-col justify-around font-normal text-charcoal-grey desktop:w-[55%]">
-
-      <h1 class="text-dark-gray text-4xl mb-5 desktop:text-5xl font-roboto font-bold">
-        Stay Updated!
-      </h1>
-      <p class="text-lg">
-        Join 60,000+ product managers receiving monthly updates on:
-      </p>
-      <ul class="flex flex-col mt-5 mb-10 space-y-3 desktop:space-y-5">
-        <li class="font-bold text-md flex items-start">
-          <img class="inline-block me-4" src="assets/images/icon-list.svg" />
-          Product discovery and building what matters
-        </li>
-        <li class="font-bold text-md flex items-start ">
-          <img class="inline-block me-4" src="assets/images/icon-list.svg" />
-          Measuring to ensure updates are a success
-        </li>
-        <li class="font-bold text-md flex items-start">
-          <img class="inline-block me-4" src="assets/images/icon-list.svg" />
-          And much more!
-        </li>
-      </ul>
-
-      <section class="flex desktop:flex-col flex-col">
-        <section class="flex justify-between">
-          <label class="font-bold text-xs mb-2">Email address</label>
-          <label id="emailValidation" class="font-bold text-xs mb-2 text-tomato"></label>
+        <section class="flex desktop:flex-col flex-col">
+          <section class="flex justify-between">
+            <label class="font-bold text-xs mb-2">Email address</label>
+            <label
+              id="emailValidation"
+              class="font-bold text-xs mb-2 text-tomato"
+            ></label>
+          </section>
+          <input
+            type="email"
+            class="border border-solid rounded-lg p-3 focus:border-dark-gray outline-none cursor-pointer"
+            name="mail"
+            placeholder="email@company.com"
+            id="userMail"
+          />
+          <button
+            onclick="subToNewsLetter()"
+            class="bg-dark-gray rounded-lg text-white py-4 my-5 font-normal tracking-wide hover:bg-gradient-to-r hover:bg-tomato transition-all"
+            id="subBtn"
+          >
+            Subscribe to monthly newsletter
+          </button>
         </section>
-        <input type="email"
-          class="border border-solid rounded-lg p-3 focus:border-dark-gray outline-none cursor-pointer" name="mail"
-          placeholder="email@company.com" id="userMail" />
-        <button onclick="subToNewsLetter()"
-          class="bg-dark-gray rounded-lg text-white py-4 my-5 font-normal tracking-wide hover:bg-gradient-to-r hover:bg-tomato transition-all"
-          id="subBtn">
-          Subscribe to monthly newsletter
-        </button>
       </section>
 
+      <picture>
+        <source
+          srcset="assets/images/illustration-sign-up-desktop.svg"
+          media="(min-width:375px)"
+        />
+        <img src="assets/images/illustration-sign-up-mobile.svg" />
+      </picture>
     </section>
 
-    <picture>
-      <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width:375px)">
-      <img src="assets/images/illustration-sign-up-mobile.svg" />
-    </picture>
-  </section>
+    <section
+      style="display: none"
+      id="successSection"
+      class="bg-white p-16 flex desktop:flex-col flex-col h-screen desktop:h-auto space-y-5 desktop:w-[25%] rounded-3xl justify-evenly"
+    >
+      <img class="w-[20%]" src="assets/images/icon-success.svg" />
+      <h1 class="text-6xl font-bold text-dark-gray">Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span id="userMailSuccess" class="font-bold"></span>. Please open it and
+        click the button inside to confirm your subscription.
+      </p>
+      <button
+        onclick="backToHome()"
+        class="bg-dark-gray rounded-lg text-white py-4 my-5 font-normal tracking-wide hover:bg-gradient-to-r hover:bg-tomato transition-all"
+        id="backToHomeBtn"
+      >
+        Dismiss message
+      </button>
+    </section>
 
-  <section style="display: none;"  id="successSection" class="bg-white p-16 flex desktop:flex-col flex-col h-screen desktop:h-auto space-y-5 desktop:w-[25%] rounded-3xl justify-evenly">
-    <img class="w-[20%]" src="assets/images/icon-success.svg">
-    <h1 class="text-6xl font-bold text-dark-gray">Thanks for subscribing!</h1>
-    <p>A confirmation email has been sent to <span id="userMailSuccess" class="font-bold"></span>. Please open it and click the button inside to confirm your subscription.</p>
-    <button onclick="backToHome()"
-    class="bg-dark-gray rounded-lg text-white py-4 my-5 font-normal tracking-wide hover:bg-gradient-to-r hover:bg-tomato transition-all  "
-    id="backToHomeBtn">
-    Dismiss message
-  </button>
-  </section>
-
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
 
 <!-- Sign-up form start 
