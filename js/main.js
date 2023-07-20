@@ -8,22 +8,22 @@ let userMailSuccess = document.getElementById('userMailSuccess')
 
 let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-function subToNewsLetter() {
-    if (regex.test(userMail.value)) {
-        userMailSuccess.innerHTML = userMail.value
-        userMail.value=``
-        emailValidation.innerHTML=``
-        successSub()
-        // console.log(localStorage.getItem("mail"))
-    }else{
-        emailValidation.innerHTML="Please Enter Valid Mail"
-    }
+function subToNewsLetter () {
+  if (regex.test(userMail.value)) {
+    userMailSuccess.innerHTML = userMail.value
+    userMail.value = ``
+    emailValidation.innerHTML = ``
+    successSub()
+    // console.log(localStorage.getItem("mail"))
+  } else {
+    emailValidation.innerHTML = 'Please Enter Valid Mail'
+  }
 }
-function successSub(){
-    successSection.style.display="flex";
-    mainForm.style.display="none"
+function successSub () {
+  successSection.style.display = 'flex'
+  mainForm.style.display = 'none'
 }
-function backToHome(){
-    successSection.style.display="none";
-    mainForm.style.display="flex"
+function backToHome () {
+  successSection.style.display = 'none'
+  mainForm.style.display = 'flex'
 }
